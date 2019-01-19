@@ -58,10 +58,14 @@ common_tags = {
 ```
 Available targets:
 
-  help/all:                          Display help for all targets
-  help/short:                        This help short screen
-  help:                              Help screen
-  lint:                              Lint terraform code
+  help/all:
+                          Display help for all targets
+  help/short:
+                        This help short screen
+  help:
+                              Help screen
+  lint:
+                              Lint terraform code
 
 ```
 ## Inputs
@@ -164,11 +168,9 @@ See [LICENSE](LICENSE) for full details.
 ### Contributors
 
 |  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
-|---|
 
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-
 
 
 [logo]: docs/slalom-logo.png
