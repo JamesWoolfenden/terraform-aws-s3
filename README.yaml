@@ -50,7 +50,9 @@ related:
 # Short description of this project
 description: |-
   Terraform module to provision a secure terraform s3 bucket.
-
+# Introduction to the project
+introduction: |-
+#  This is an introduction.
 # How to use this project
 usage: |-
   Include this repository as a module in your existing terraform code:
