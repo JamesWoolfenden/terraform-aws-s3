@@ -7,22 +7,12 @@
 
 Terraform module to provision a secure terraform s3 bucket.
 
-
 ---
 
 This project uses the "build-harness" a modified version of the project ["SweetOps"](https://cpco.io/sweetops) from Cloudposse. Sweet indeed.
 
 
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
-
-
-
-
-
-
-
-
-
 
 ## Usage
 
@@ -125,7 +115,6 @@ See [LICENSE](LICENSE) for full details.
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
-
 
 ### Contributors
 
