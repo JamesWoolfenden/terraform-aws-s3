@@ -36,7 +36,7 @@ github_repo: JamesWoolfenden/terraform-aws-3
 # Badges to display
 badges:
   - name: "Build Status"
-    image: "https://api.travis-ci.com/JamesWoolfenden/terraform-aws-s3.svg?branch=master"
+    image: "https://travis-ci.com/JamesWoolfenden/terraform-aws-s3.svg?branch=master"
     url: "https://travis-ci.com/JamesWoolfenden/terraform-aws-s3"
   - name: "Latest Release"
     image: "https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-s3.svg"
@@ -67,7 +67,6 @@ usage: |-
 
 include:
   - "docs/usage.md"
-  - "docs/targets.md"
   - "docs/terraform.md"
 
 
