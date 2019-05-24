@@ -4,13 +4,11 @@
 
 # terraform-aws-s3 [![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-s3.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-s3) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-s3.svg)](https://github.com/JamesWoolfenden/terraform-aws-s3/releases/latest)
 
-
 Terraform module to provision a secure terraform s3 bucket.
 
 ---
 
 This project uses the "build-harness" a modified version of the project ["SweetOps"](https://cpco.io/sweetops) from Cloudposse. Sweet indeed.
-
 
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
@@ -26,11 +24,6 @@ common_tags = "${var.common_tags}"
 }
 ```
 
-
-
-
-
-
 ## Usage
 
 This creates an s3 bucket with policy and applies the common tags scheme.
@@ -44,6 +37,7 @@ common_tags = {
     environment = "develop"
 }
 ```
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -62,17 +56,11 @@ common_tags = {
 | bucket_domain_name | The full domain name of the bucket |
 | s3_id | The id of the bucket |
 
-
-
-
 ## Related Projects
 
 Check out these related projects.
 
 - [terraform-aws-statebucket](https://github.com/jameswoolfenden/terraform-aws-statebucket) - Terraform s3 state buckets
-
-
-
 
 ## Help
 
@@ -80,14 +68,11 @@ Check out these related projects.
 
 File a GitHub [issue](https://github.com/JamesWoolfenden/terraform-aws-3/issues).
 
-
 ## Contributing
 
 ### Bug Reports & Feature Requests
 
 Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-3/issues) to report any bugs or file feature requests.
-
-
 
 ## Copyrights
 
@@ -120,7 +105,6 @@ See [LICENSE](LICENSE) for full details.
 
   [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
 
-
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 
@@ -134,5 +118,4 @@ See [LICENSE](LICENSE) for full details.
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-s3&url=https://github.com/JamesWoolfenden/terraform-aws-3
 [share_reddit]: https://reddit.com/submit/?url=https://github.com/JamesWoolfenden/terraform-aws-3
 [share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/JamesWoolfenden/terraform-aws-3
-[share_googleplus]: https://plus.google.com/share?url=https://github.com/JamesWoolfenden/terraform-aws-3
 [share_email]: mailto:?subject=terraform-aws-s3&body=https://github.com/JamesWoolfenden/terraform-aws-3

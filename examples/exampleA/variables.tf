@@ -1,14 +1,19 @@
 variable "common_tags" {
   description = "This is a map type for applying tags on resources"
-  type        = "map"
+  type        = map
 }
 
 variable "s3_bucket_name" {
   description = "The name of the bucket"
-  type        = "string"
+  type        = string
 }
 
 variable "s3_bucket_force_destroy" {
   description = "String Boolean to set bucket to be undeletable (well more difficult anyway)"
-  type        = "string"
+  type        = string
+}
+
+variable "region" {
+  type    = string
+  default = "eu-west-1"
 }
