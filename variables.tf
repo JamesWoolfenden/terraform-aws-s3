@@ -1,6 +1,6 @@
 variable "common_tags" {
   description = "This is a map type for applying tags on resources"
-  type        = "map"
+  type        = map
 }
 
 variable "s3_bucket_name" {
@@ -16,7 +16,7 @@ variable "s3_bucket_force_destroy" {
 variable "s3_bucket_acl" {
   default     = "private"
   description = "Acl on the bucket"
-    type        = string
+  type        = string
 }
 
 variable "s3_bucket_policy" {
@@ -26,5 +26,6 @@ variable "s3_bucket_policy" {
 
 
 locals {
-  env = "${substr(var.common_tags["environment"],0,1)}"
+  env = substr(var.common_tags["environment"], 0, 1)
 }
+
