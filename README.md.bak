@@ -33,24 +33,7 @@ common_tags = {
 }
 ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| common\_tags | This is a map type for applying tags on resources | map | n/a | yes |
-| s3\_bucket\_acl | Acl on the bucket | string | `"private"` | no |
-| s3\_bucket\_force\_destroy | String Boolean to set bucket to be undeletable (well more difficult anyway) | string | n/a | yes |
-| s3\_bucket\_name | The name of the bucket | string | n/a | yes |
-| s3\_bucket\_policy | The IAM policy for the bucket | string | n/a | yes |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| account\_id | The AWS account number in use |
-| bucket\_domain\_name | The full domain name of the bucket |
-| s3\_id | The id of the bucket |
-
+I_WANT_TO_BE_REPLACED
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Instructions

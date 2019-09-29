@@ -4,5 +4,5 @@ resource "aws_s3_bucket" "bucket" {
   acl           = var.s3_bucket_acl
   force_destroy = var.s3_bucket_force_destroy
 
-  tags = merge(var.common_tags, map("Name", "${local.env}-${var.s3_bucket_name}-S3"))
+  tags = var.common_tags
 }
