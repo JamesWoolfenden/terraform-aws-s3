@@ -3,7 +3,7 @@
 
 # terraform-aws-s3 [![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-s3.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-s3) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-s3.svg)](https://github.com/JamesWoolfenden/terraform-aws-s3/releases/latest)
 
-Terraform module to provision a secure terraform s3 bucket.
+Terraform module to provision a secure Terraform S3 bucket.
 
 ---
 
@@ -13,11 +13,14 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 Include this repository as a module in your existing terraform code:
 
-```hcl
+```terraform
 module "s3" {
-source      = "JamesWoolfenden/s3/aws"
-version     = "0.0.4"
-common_tags = var.common_tags
+  source                  = "JamesWoolfenden/s3/aws"
+  version                 = "0.2.46"
+  s3_bucket_force_destroy = var.s3_bucket_force_destroy
+  s3_bucket_name          = var.s3_bucket_name
+  s3_bucket_policy        = data.aws_iam_policy_document.s3_policy.json
+  common_tags             = var.common_tags
 }
 ```
 
@@ -27,8 +30,8 @@ This needs to consist of as a minimum (in your _terraform.tfvars_):
 
 ```HCL
 common_tags = {
-    application = "terraform"
-    module      = "s3"
+    application = "Terraform"
+    module      = "S3"
     environment = "develop"
 }
 ```
