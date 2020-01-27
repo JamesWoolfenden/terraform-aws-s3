@@ -36,15 +36,25 @@ common_tags = {
 }
 ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| common\_tags | This is a map type for applying tags on resources | map | n/a | yes |
-| s3\_bucket\_acl | Acl on the bucket | string | `"private"` | no |
-| s3\_bucket\_force\_destroy | String Boolean to set bucket to be undeletable (well more difficult anyway) | string | n/a | yes |
-| s3\_bucket\_name | The name of the bucket | string | n/a | yes |
-| s3\_bucket\_policy | The IAM policy for the bucket | string | n/a | yes |
+|------|-------------|------|---------|:-----:|
+| common\_tags | This is a map type for applying tags on resources | `map` | n/a | yes |
+| logging | If setting up a logging bucket | `map` | <pre>{<br>  "target_bucket": "",<br>  "target_prefix": ""<br>}<br></pre> | no |
+| s3\_bucket\_acl | Acl on the bucket | `string` | `"private"` | no |
+| s3\_bucket\_force\_destroy | String Boolean to set bucket to be undeletable (well more difficult anyway) | `string` | n/a | yes |
+| s3\_bucket\_name | The name of the bucket | `string` | n/a | yes |
+| s3\_bucket\_policy | The IAM policy for the bucket | `string` | n/a | yes |
+| s3\_logging | Enable logging on s3 bucket | `bool` | `true` | no |
+| sse\_algorithm | The type of encryption algorithm to use | `string` | `"aws:kms"` | no |
+| versioning | Enable versioning on s3 bucket | `bool` | `true` | no |
 
 ## Outputs
 

@@ -24,8 +24,34 @@ variable "s3_bucket_policy" {
   type        = string
 }
 
+variable "s3_logging" {
+  description = "Enable logging on s3 bucket"
+  type        = bool
+  default     = true
+}
+
+variable "versioning" {
+  description = "Enable versioning on s3 bucket"
+  type        = bool
+  default     = true
+}
+
+variable "sse_algorithm" {
+  description = "The type of encryption algorithm to use"
+  type        = string
+  default     = "aws:kms"
+}
+
+variable "logging" {
+  description = "If setting up a logging bucket"
+  type        = map
+  default = {
+    target_bucket = ""
+    target_prefix = ""
+  }
+}
+
 
 locals {
   env = substr(var.common_tags["environment"], 0, 1)
 }
-
