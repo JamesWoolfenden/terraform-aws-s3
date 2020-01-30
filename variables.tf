@@ -51,6 +51,16 @@ variable "logging" {
   }
 }
 
+variable "access_block" {
+  description = ""
+  type        = map
+  default = {
+    block_public_acls       = false
+    block_public_policy     = false
+    ignore_public_acls      = false
+    restrict_public_buckets = false
+  }
+}
 
 locals {
   env = substr(var.common_tags["environment"], 0, 1)

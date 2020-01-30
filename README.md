@@ -46,6 +46,7 @@ common_tags = {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
+| access\_block | n/a | `map` | <pre>{<br>  "block_public_acls": false,<br>  "block_public_policy": false,<br>  "ignore_public_acls": false,<br>  "restrict_public_buckets": false<br>}<br></pre> | no |
 | common\_tags | This is a map type for applying tags on resources | `map` | n/a | yes |
 | logging | If setting up a logging bucket | `map` | <pre>{<br>  "target_bucket": "",<br>  "target_prefix": ""<br>}<br></pre> | no |
 | s3\_bucket\_acl | Acl on the bucket | `string` | `"private"` | no |
@@ -61,8 +62,7 @@ common_tags = {
 | Name | Description |
 |------|-------------|
 | account\_id | The AWS account number in use |
-| bucket\_domain\_name | The full domain name of the bucket |
-| s3\_id | The id of the bucket |
+| bucket | The  bucket |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
