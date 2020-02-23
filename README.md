@@ -16,7 +16,7 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
 
-Include this repository as a module in your existing terraform code:
+Include this repository as a module in your existing Terraform code:
 
 ```terraform
 module "s3" {
@@ -31,7 +31,7 @@ module "s3" {
 
 This creates an s3 bucket with policy and applies the common tags scheme.
 The module uses a tagging scheme based on the map variable common_tags.
-This needs to consist of as a minimum (in your _terraform.tfvars_):
+This needs to consist of as a minimum (in your _auto.tfvars_):
 
 ```HCL
 common_tags = {
@@ -129,7 +129,6 @@ under the License.
 [github]: https://github.com/jameswoolfenden
 [linkedin]: https://www.linkedin.com/company/slalom-consulting/
 [twitter]: https://twitter.com/Slalom
-
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-s3&url=https://github.com/JamesWoolfenden/terraform-aws-3
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-s3&url=https://github.com/JamesWoolfenden/terraform-aws-3
 [share_reddit]: https://reddit.com/submit/?url=https://github.com/JamesWoolfenden/terraform-aws-3
