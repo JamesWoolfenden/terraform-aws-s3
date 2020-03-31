@@ -12,8 +12,8 @@ resource "aws_s3_bucket" "bucket" {
   force_destroy = var.s3_bucket_force_destroy
 
   versioning {
-    enabled = var.versioning
-    mfa_delete=var.mfa_delete
+    enabled    = var.versioning
+    mfa_delete = var.mfa_delete
   }
 
   server_side_encryption_configuration {
@@ -25,10 +25,4 @@ resource "aws_s3_bucket" "bucket" {
   }
 
   tags = var.common_tags
-}
-
-variable "mfa_delete" {
-  type=bool
-  description="To enable/disable MFA delete"
-  default=true
 }

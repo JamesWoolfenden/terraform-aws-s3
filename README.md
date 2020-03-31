@@ -40,7 +40,7 @@ common_tags = {
     environment = "develop"
 }
 ```
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Providers
 
 | Name | Version |
@@ -51,9 +51,10 @@ common_tags = {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
-| access\_block | n/a | `map` | <pre>{<br>  "block_public_acls": false,<br>  "block_public_policy": false,<br>  "ignore_public_acls": false,<br>  "restrict_public_buckets": false<br>}<br></pre> | no |
+| access\_block | n/a | `map` | <pre>{<br>  "block_public_acls": false,<br>  "block_public_policy": false,<br>  "ignore_public_acls": false,<br>  "restrict_public_buckets": false<br>}</pre> | no |
 | common\_tags | This is a map type for applying tags on resources | `map` | n/a | yes |
-| logging | If setting up a logging bucket | `map` | <pre>{<br>  "target_bucket": "",<br>  "target_prefix": ""<br>}<br></pre> | no |
+| logging | If setting up a logging bucket | `map` | <pre>{<br>  "target_bucket": "",<br>  "target_prefix": ""<br>}</pre> | no |
+| mfa\_delete | To enable/disable MFA delete | `bool` | `true` | no |
 | s3\_bucket\_acl | Acl on the bucket | `string` | `"private"` | no |
 | s3\_bucket\_force\_destroy | String Boolean to set bucket to be undeletable (well more difficult anyway) | `string` | n/a | yes |
 | s3\_bucket\_name | The name of the bucket | `string` | n/a | yes |

@@ -62,6 +62,12 @@ variable "access_block" {
   }
 }
 
+variable "mfa_delete" {
+  type        = bool
+  description = "To enable/disable MFA delete"
+  default     = true
+}
+
 locals {
   env = substr(var.common_tags["environment"], 0, 1)
 }
