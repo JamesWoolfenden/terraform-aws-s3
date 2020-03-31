@@ -5,12 +5,19 @@
 
 # Module directory
 .terraform
+__pycache__
 .idea
 *.iml
+*.orig
 .build-harness
 build-harness
 *.ini
 *~HEAD
 *backup
 *.orig
+*.ini
+tmp
+lambda
+*~HEAD
+*backup
 *.bak

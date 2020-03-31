@@ -3,7 +3,7 @@
 
 # terraform-aws-s3
 
-[![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-s3.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-s3)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-s3/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-s3)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-s3.svg)](https://github.com/JamesWoolfenden/terraform-aws-s3/releases/latest)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
