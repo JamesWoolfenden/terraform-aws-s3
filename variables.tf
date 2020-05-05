@@ -42,15 +42,6 @@ variable "sse_algorithm" {
   default     = "aws:kms"
 }
 
-variable "logging" {
-  description = "If setting up a logging bucket"
-  type        = map
-  default = {
-    target_bucket = ""
-    target_prefix = ""
-  }
-}
-
 variable "access_block" {
   description = ""
   type        = map

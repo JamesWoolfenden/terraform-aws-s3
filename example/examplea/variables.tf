@@ -12,3 +12,7 @@ variable "s3_bucket_force_destroy" {
   description = "String Boolean to set bucket to be undeletable (well more difficult anyway)"
   type        = string
 }
+
+variable "mfa_delete" {
+  type = bool
+}

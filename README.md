@@ -31,7 +31,7 @@ module "s3" {
 
 This creates an s3 bucket with policy and applies the common tags scheme.
 The module uses a tagging scheme based on the map variable common_tags.
-This needs to consist of as a minimum (in your _auto.tfvars_):
+This needs to consist of as a minimum (in your **auto.tfvars**):
 
 ```HCL
 common_tags = {
@@ -53,7 +53,6 @@ common_tags = {
 |------|-------------|------|---------|:-----:|
 | access\_block | n/a | `map` | <pre>{<br>  "block_public_acls": false,<br>  "block_public_policy": false,<br>  "ignore_public_acls": false,<br>  "restrict_public_buckets": false<br>}</pre> | no |
 | common\_tags | This is a map type for applying tags on resources | `map` | n/a | yes |
-| logging | If setting up a logging bucket | `map` | <pre>{<br>  "target_bucket": "",<br>  "target_prefix": ""<br>}</pre> | no |
 | mfa\_delete | To enable/disable MFA delete | `bool` | `true` | no |
 | s3\_bucket\_acl | Acl on the bucket | `string` | `"private"` | no |
 | s3\_bucket\_force\_destroy | String Boolean to set bucket to be undeletable (well more difficult anyway) | `string` | n/a | yes |
