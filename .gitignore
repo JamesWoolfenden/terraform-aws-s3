@@ -9,8 +9,6 @@ __pycache__
 .idea
 *.iml
 *.orig
-.build-harness
-build-harness
 *.ini
 *~HEAD
 *backup
