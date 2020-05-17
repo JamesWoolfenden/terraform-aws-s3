@@ -8,7 +8,7 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 
-Terraform module to provision a secure Terraform S3 bucket. Has a provisioning test in its' Github actions.
+Terraform module to provision a secure Terraform S3 bucket. Has a provisioning test in its' Github actions
 
 ---
 
@@ -21,7 +21,7 @@ Include this repository as a module in your existing Terraform code:
 ```terraform
 module "s3" {
   source                  = "JamesWoolfenden/s3/aws"
-  version                 = "0.2.46"
+  version                 = "0.4.0"
   s3_bucket_force_destroy = var.s3_bucket_force_destroy
   s3_bucket_name          = var.s3_bucket_name
   s3_bucket_policy        = data.aws_iam_policy_document.s3_policy.json
