@@ -8,7 +8,7 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 
-Terraform module to provision a secure Terraform S3 bucket.
+Terraform module to provision a secure Terraform S3 bucket. Has a provisioning test in its' Github actions.
 
 ---
 
