@@ -1,6 +1,3 @@
-
-[![Slalom][logo]](https://slalom.com)
-
 # terraform-aws-s3
 
 [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-s3/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-s3)
@@ -40,7 +37,9 @@ common_tags = {
     environment = "develop"
 }
 ```
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
@@ -48,30 +47,30 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
-| aws | n/a |
+| ---- | ------- |
+| aws  | n/a     |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| access\_block | n/a | `map` | <pre>{<br>  "block_public_acls": false,<br>  "block_public_policy": false,<br>  "ignore_public_acls": false,<br>  "restrict_public_buckets": false<br>}</pre> | no |
-| common\_tags | This is a map type for applying tags on resources | `map` | n/a | yes |
-| mfa\_delete | To enable/disable MFA delete | `bool` | `true` | no |
-| s3\_bucket\_acl | Acl on the bucket | `string` | `"private"` | no |
-| s3\_bucket\_force\_destroy | String Boolean to set bucket to be undeletable (well more difficult anyway) | `string` | n/a | yes |
-| s3\_bucket\_name | The name of the bucket | `string` | n/a | yes |
-| s3\_bucket\_policy | The IAM policy for the bucket | `string` | n/a | yes |
-| s3\_logging | Enable logging on s3 bucket | `bool` | `true` | no |
-| sse\_algorithm | The type of encryption algorithm to use | `string` | `"aws:kms"` | no |
-| versioning | Enable versioning on s3 bucket | `bool` | `true` | no |
+| Name                    | Description                                                                 | Type     | Default                                                                                                                                                   | Required |
+| ----------------------- | --------------------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: |
+| access_block            | n/a                                                                         | `map`    | <pre>{<br> "block_public_acls": false,<br> "block_public_policy": false,<br> "ignore_public_acls": false,<br> "restrict_public_buckets": false<br>}</pre> |    no    |
+| common_tags             | This is a map type for applying tags on resources                           | `map`    | n/a                                                                                                                                                       |   yes    |
+| mfa_delete              | To enable/disable MFA delete                                                | `bool`   | `true`                                                                                                                                                    |    no    |
+| s3_bucket_acl           | Acl on the bucket                                                           | `string` | `"private"`                                                                                                                                               |    no    |
+| s3_bucket_force_destroy | String Boolean to set bucket to be undeletable (well more difficult anyway) | `string` | n/a                                                                                                                                                       |   yes    |
+| s3_bucket_name          | The name of the bucket                                                      | `string` | n/a                                                                                                                                                       |   yes    |
+| s3_bucket_policy        | The IAM policy for the bucket                                               | `string` | n/a                                                                                                                                                       |   yes    |
+| s3_logging              | Enable logging on s3 bucket                                                 | `bool`   | `true`                                                                                                                                                    |    no    |
+| sse_algorithm           | The type of encryption algorithm to use                                     | `string` | `"aws:kms"`                                                                                                                                               |    no    |
+| versioning              | Enable versioning on s3 bucket                                              | `bool`   | `true`                                                                                                                                                    |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| account\_id | The AWS account number in use |
-| bucket | The  bucket |
+| Name       | Description                   |
+| ---------- | ----------------------------- |
+| account_id | The AWS account number in use |
+| bucket     | The bucket                    |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
@@ -97,7 +96,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
+Copyright © 2019-2020 James Woolfenden
 
 ## License
 
@@ -106,19 +105,19 @@ Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
 See [LICENSE](LICENSE) for full details.
 
 Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
+or more contributor license agreements. See the NOTICE file
 distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
+regarding copyright ownership. The ASF licenses this file
 to you under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
+with the License. You may obtain a copy of the License at
 
 <https://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
 "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
+KIND, either express or implied. See the License for the
 specific language governing permissions and limitations
 under the License.
 
@@ -128,8 +127,6 @@ under the License.
 
 [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-[logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
-[website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
 [linkedin]: https://www.linkedin.com/in/jameswoolfenden/
 [twitter]: https://twitter.com/JimWoolfenden
