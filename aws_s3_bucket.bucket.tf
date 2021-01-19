@@ -5,6 +5,7 @@ resource "aws_s3_bucket" "bucket" {
 
   force_destroy = var.s3_bucket_force_destroy
   #checkov:skip=CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
+  #checkov:skip=CKV_AWS_52: "Ensure S3 bucket has MFA delete enabled"
   versioning {
     enabled    = var.versioning
     mfa_delete = var.mfa_delete
