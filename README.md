@@ -9,7 +9,7 @@
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-s3/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-s3&benchmark=INFRASTRUCTURE+SECURITY)
 
-Terraform module to provision a secure Terraform S3 bucket. Has a provisioning test in its' Github actions
+This ia a Terraform module to provision a secure Terraform S3 bucket. It also has a provisioning test included in its' Github actions so you can be sure each labelled version works.
 
 ---
 
@@ -30,9 +30,9 @@ module "s3" {
 }
 ```
 
-This creates an s3 bucket with policy and applies the common tags scheme.
+This creates an S3 bucket with policy and applies the common tags scheme.
 The module uses a tagging scheme based on the map variable common_tags.
-This needs to consist of as a minimum (in your **auto.tfvars**):
+This needs to consist of as a minimum (in your ***.auto.tfvars**):
 
 ```HCL
 common_tags = {
