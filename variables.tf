@@ -1,6 +1,6 @@
 variable "common_tags" {
   description = "This is a map type for applying tags on resources"
-  type        = map
+  type        = map(any)
 }
 
 variable "s3_bucket_name" {
@@ -44,7 +44,7 @@ variable "sse_algorithm" {
 
 variable "access_block" {
   description = ""
-  type        = map
+  type        = map(any)
   default = {
     block_public_acls       = false
     block_public_policy     = false
@@ -59,6 +59,7 @@ variable "mfa_delete" {
   default     = true
 }
 
-locals {
-  env = substr(var.common_tags["environment"], 0, 1)
+variable "logging" {
+  type    = list(string)
+  default = []
 }

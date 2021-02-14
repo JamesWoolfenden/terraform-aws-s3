@@ -38,7 +38,6 @@ This needs to consist of as a minimum (in your ***.auto.tfvars**):
 common_tags = {
     application = "Terraform"
     module      = "S3"
-    environment = "develop"
 }
 ```
 
@@ -57,8 +56,9 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| access\_block | n/a | `map` | <pre>{<br>  "block_public_acls": false,<br>  "block_public_policy": false,<br>  "ignore_public_acls": false,<br>  "restrict_public_buckets": false<br>}</pre> | no |
-| common\_tags | This is a map type for applying tags on resources | `map` | n/a | yes |
+| access\_block | n/a | `map(any)` | <pre>{<br>  "block_public_acls": false,<br>  "block_public_policy": false,<br>  "ignore_public_acls": false,<br>  "restrict_public_buckets": false<br>}</pre> | no |
+| common\_tags | This is a map type for applying tags on resources | `map(any)` | n/a | yes |
+| logging | n/a | `list(string)` | `[]` | no |
 | mfa\_delete | To enable/disable MFA delete | `bool` | `true` | no |
 | s3\_bucket\_acl | Acl on the bucket | `string` | `"private"` | no |
 | s3\_bucket\_force\_destroy | String Boolean to set bucket to be undeletable (well more difficult anyway) | `string` | n/a | yes |

@@ -4,12 +4,20 @@ resource "aws_s3_bucket" "bucket" {
   policy = var.s3_bucket_policy
 
   force_destroy = var.s3_bucket_force_destroy
-  #checkov:skip=CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
   #checkov:skip=CKV_AWS_52: "Ensure S3 bucket has MFA delete enabled"
   versioning {
     enabled    = var.versioning
     mfa_delete = var.mfa_delete
   }
+
+  dynamic "logging" {
+    for_each = var.logging
+    content {
+      target_bucket = logging.value["target_bucket"]
+      target_prefix = "log/${var.s3_bucket_name}"
+    }
+  }
+
 
   server_side_encryption_configuration {
     rule {
@@ -18,6 +26,8 @@ resource "aws_s3_bucket" "bucket" {
       }
     }
   }
+
+
 
   tags = var.common_tags
 }
