@@ -41,6 +41,7 @@ valid:
 	terraform fmt -recursive
 	checkov -d . --external-checks-dir ../../checkov
 	tfsec .
+	terrascan scan
 
 target:
 	@read -p "Enter Module to target:" MODULE;
