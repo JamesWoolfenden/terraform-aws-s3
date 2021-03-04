@@ -27,7 +27,5 @@ resource "aws_s3_bucket" "bucket" {
     }
   }
 
-
-
   tags = var.common_tags
 }
