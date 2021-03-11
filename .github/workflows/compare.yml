@@ -3,11 +3,11 @@
 name: Compare
 on:
   schedule:
-    - cron: '00 7 * * SAT'
+    - cron: "00 7 * * SAT"
   workflow_dispatch:
 
 env:
-  terraform: 0.14.5
+  terraform: 0.14.8
   terraform-docs: 0.11.2
   tf_target_dir: example/examplea
   branch: master
@@ -71,4 +71,4 @@ jobs:
         uses: checkmarx/kics-action@v1.0
         with:
           path: ${{ env.tf_target_dir }}
-          output_path: 'kics.json'
+          output_path: "kics.json"
