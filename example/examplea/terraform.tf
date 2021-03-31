@@ -1,4 +1,13 @@
 terraform {
+  backend "remote" {
+    organization = "Wolf"
+
+    workspaces {
+      name = "terraform-aws-s3-examplea"
+    }
+  }
+
+
   required_providers {
     aws = {
       version = "3.32.0"
