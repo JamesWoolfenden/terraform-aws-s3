@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "bucket" {
     mfa_delete = var.mfa_delete
   }
 
-  #dynamic block is used to work around when lodding is not required
+  #dynamic block is used to work around when logging is not required
   dynamic "logging" {
     for_each = var.logging
     content {
