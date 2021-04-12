@@ -72,7 +72,7 @@ No modules.
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is a map type for applying tags on resources | `map(any)` | n/a | yes |
 | <a name="input_logging"></a> [logging](#input\_logging) | n/a | `list(string)` | `[]` | no |
 | <a name="input_mfa_delete"></a> [mfa\_delete](#input\_mfa\_delete) | To enable/disable MFA delete | `bool` | `true` | no |
-| <a name="input_replication_configuration"></a> [replication\_configuration](#input\_replication\_configuration) | n/a | `map` | <pre>{<br>  "role": "",<br>  "rules": []<br>}</pre> | no |
+| <a name="input_role"></a> [role](#input\_role) | n/a | `map` | `{}` | no |
 | <a name="input_s3_bucket_acl"></a> [s3\_bucket\_acl](#input\_s3\_bucket\_acl) | Acl on the bucket | `string` | `"private"` | no |
 | <a name="input_s3_bucket_force_destroy"></a> [s3\_bucket\_force\_destroy](#input\_s3\_bucket\_force\_destroy) | String Boolean to set bucket to be undeletable (well more difficult anyway) | `string` | n/a | yes |
 | <a name="input_s3_bucket_name"></a> [s3\_bucket\_name](#input\_s3\_bucket\_name) | The name of the bucket | `string` | n/a | yes |

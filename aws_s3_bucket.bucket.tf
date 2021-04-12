@@ -19,9 +19,16 @@ resource "aws_s3_bucket" "bucket" {
     }
   }
 
-  replication_configuration {
-    role  = var.replication_configuration["role"]
-    rules = var.replication_configuration["rules"]
+  dynamic "replication_configuration" {
+    for_each = var.role
+    content {
+      role = replication_configuration.value["role"]
+      rules {
+        id     = replication_configuration.value["id"]
+        status = replication_configuration.value["status"]
+      }
+
+    }
   }
 
   server_side_encryption_configuration {
@@ -35,10 +42,6 @@ resource "aws_s3_bucket" "bucket" {
   tags = var.common_tags
 }
 
-
-variable "replication_configuration" {
-  default = {
-    role  = ""
-    rules = []
-  }
+variable "role" {
+  default = {}
 }
