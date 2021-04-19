@@ -1,3 +1,4 @@
+# tfsec:ignore:AWS002
 resource "aws_s3_bucket" "bucket" {
   acl    = var.s3_bucket_acl
   bucket = var.s3_bucket_name

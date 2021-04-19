@@ -1,3 +1,4 @@
+# tfsec:ignore:AWS077
 resource "aws_s3_bucket" "logging" {
   # checkov:skip=CKV_AWS_145: Example code
   # checkov:skip=CKV_AWS_144: Not required
