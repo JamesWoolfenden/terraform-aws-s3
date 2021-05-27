@@ -1,5 +1,6 @@
 # tfsec:ignore:AWS002
 resource "aws_s3_bucket" "bucket" {
+  #checkov:skip=CKV2_AWS_6: to restrictive
   acl    = var.s3_bucket_acl
   bucket = var.s3_bucket_name
   policy = var.s3_bucket_policy
