@@ -47,14 +47,14 @@ docs:
 
 valid:
 	-terraform fmt -recursive
-	-checkov -d . --external-checks-dir ../../checkov
+	-checkov -d . --external-checks-dir ../../checkov --download-external-modules true
 	-tfsec .
 	-terrascan scan
 	docker pull checkmarx/kics:latest
 	docker run -v $(CURDIR):/path checkmarx/kics:latest scan --path /path
 
 compare:
-	-checkov -d . --external-checks-dir ../../checkov -o json >../../output/checkov.json
+	-checkov -d . --external-checks-dir ../../checkov -o json >../../output/checkov.json --download-external-modules true
 	-terrascan scan -o json -x json >../../output/terrascan.json
 	-tfsec . --out ../../output/tfsec.json -f json -s
 	docker pull checkmarx/kics:latest
