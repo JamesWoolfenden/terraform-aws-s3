@@ -43,13 +43,13 @@ variable "sse_algorithm" {
 }
 
 variable "access_block" {
-  description = ""
+  description = "Settings for the public access block"
   type        = map(any)
   default = {
-    block_public_acls       = false
-    block_public_policy     = false
-    ignore_public_acls      = false
-    restrict_public_buckets = false
+    block_public_acls       = true
+    block_public_policy     = true
+    ignore_public_acls      = true
+    restrict_public_buckets = true
   }
 }
 

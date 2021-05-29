@@ -68,7 +68,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_access_block"></a> [access\_block](#input\_access\_block) | n/a | `map(any)` | <pre>{<br>  "block_public_acls": false,<br>  "block_public_policy": false,<br>  "ignore_public_acls": false,<br>  "restrict_public_buckets": false<br>}</pre> | no |
+| <a name="input_access_block"></a> [access\_block](#input\_access\_block) | Settings for the public access block | `map(any)` | <pre>{<br>  "block_public_acls": true,<br>  "block_public_policy": true,<br>  "ignore_public_acls": true,<br>  "restrict_public_buckets": true<br>}</pre> | no |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is a map type for applying tags on resources | `map(any)` | n/a | yes |
 | <a name="input_logging"></a> [logging](#input\_logging) | n/a | `list(string)` | `[]` | no |
 | <a name="input_mfa_delete"></a> [mfa\_delete](#input\_mfa\_delete) | To enable/disable MFA delete | `bool` | `true` | no |
