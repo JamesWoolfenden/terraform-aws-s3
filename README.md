@@ -26,20 +26,10 @@ module "s3" {
   s3_bucket_force_destroy = var.s3_bucket_force_destroy
   s3_bucket_name          = var.s3_bucket_name
   s3_bucket_policy        = data.aws_iam_policy_document.s3_policy.json
-  common_tags             = var.common_tags
 }
 ```
 
-This creates an S3 bucket with policy and applies the common tags scheme.
-The module uses a tagging scheme based on the map variable common_tags.
-This needs to consist of as a minimum (in your ***.auto.tfvars**):
-
-```HCL
-common_tags = {
-    application = "Terraform"
-    module      = "S3"
-}
-```
+This creates an S3 bucket with policy and applies the default tags scheme.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
@@ -69,7 +59,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_access_block"></a> [access\_block](#input\_access\_block) | Settings for the public access block | `map(any)` | <pre>{<br>  "block_public_acls": true,<br>  "block_public_policy": true,<br>  "ignore_public_acls": true,<br>  "restrict_public_buckets": true<br>}</pre> | no |
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is a map type for applying tags on resources | `map(any)` | n/a | yes |
 | <a name="input_logging"></a> [logging](#input\_logging) | n/a | `list(string)` | `[]` | no |
 | <a name="input_mfa_delete"></a> [mfa\_delete](#input\_mfa\_delete) | To enable/disable MFA delete | `bool` | `true` | no |
 | <a name="input_role"></a> [role](#input\_role) | n/a | `map` | `{}` | no |
