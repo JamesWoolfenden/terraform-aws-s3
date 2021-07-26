@@ -1,8 +1,9 @@
 provider "aws" {
-  region  = "eu-west-1"
-  version = "3.00.0"
-}
-
-provider "template" {
-  version = "2.1"
+  region = "eu-west-2"
+  default_tags {
+    tags = {
+      createdby = "terraform"
+      module    = "terraform-aws-s3"
+    }
+  }
 }
