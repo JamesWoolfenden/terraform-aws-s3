@@ -21,7 +21,7 @@ data "aws_iam_policy_document" "basic" {
     actions   = ["s3:GetObject"]
     resources = ["arn:aws:s3:::${local.full_s3_bucket_name}/*"]
     condition {
-      test="StringEquals"
+      test     = "StringEquals"
       values   = ["false"]
       variable = "aws:SecureTransport"
     }
