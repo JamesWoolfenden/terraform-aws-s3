@@ -40,7 +40,7 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.36.0 |
 
 ## Modules
 
@@ -61,7 +61,7 @@ No modules.
 | <a name="input_access_block"></a> [access\_block](#input\_access\_block) | Settings for the public access block | `map(any)` | <pre>{<br>  "block_public_acls": true,<br>  "block_public_policy": true,<br>  "ignore_public_acls": true,<br>  "restrict_public_buckets": true<br>}</pre> | no |
 | <a name="input_logging"></a> [logging](#input\_logging) | n/a | `list(string)` | `[]` | no |
 | <a name="input_mfa_delete"></a> [mfa\_delete](#input\_mfa\_delete) | To enable/disable MFA delete | `bool` | `true` | no |
-| <a name="input_role"></a> [role](#input\_role) | n/a | `map` | `{}` | no |
+| <a name="input_role"></a> [role](#input\_role) | n/a | `list` | `[]` | no |
 | <a name="input_s3_bucket_acl"></a> [s3\_bucket\_acl](#input\_s3\_bucket\_acl) | Acl on the bucket | `string` | `"private"` | no |
 | <a name="input_s3_bucket_force_destroy"></a> [s3\_bucket\_force\_destroy](#input\_s3\_bucket\_force\_destroy) | String Boolean to set bucket to be undeletable (well more difficult anyway) | `string` | n/a | yes |
 | <a name="input_s3_bucket_name"></a> [s3\_bucket\_name](#input\_s3\_bucket\_name) | The name of the bucket | `string` | n/a | yes |

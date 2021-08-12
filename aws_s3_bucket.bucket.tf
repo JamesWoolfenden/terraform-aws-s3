@@ -28,6 +28,10 @@ resource "aws_s3_bucket" "bucket" {
       rules {
         id     = replication_configuration.value["id"]
         status = replication_configuration.value["status"]
+        destination {
+          bucket        = replication_configuration.value["destination"]
+          storage_class = replication_configuration.value["storage_class"]
+        }
       }
 
     }
@@ -43,5 +47,5 @@ resource "aws_s3_bucket" "bucket" {
 }
 
 variable "role" {
-  default = {}
+  default = []
 }
