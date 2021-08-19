@@ -20,6 +20,7 @@ resource "aws_s3_bucket" "logging" {
     enabled    = false
     mfa_delete = false
   }
+
   tags = {
     yor_trace = "20266ed6-56d8-4e94-80f5-1cb595dd8c68"
   }

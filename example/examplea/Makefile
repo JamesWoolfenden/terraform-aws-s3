@@ -23,7 +23,7 @@ plan:
 planned: init
 	terraform plan -out tf.plan
 	terraform show -json tf.plan  > tf.json
-	checkov -f tf.json
+	checkov -f tf.json --bc-api-key ${BC_API_KEY}
 
 p:
 	terraform plan -refresh=true
