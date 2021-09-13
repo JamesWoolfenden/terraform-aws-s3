@@ -11,3 +11,8 @@ variable "s3_bucket_force_destroy" {
 variable "mfa_delete" {
   type = bool
 }
+
+variable "remote" {
+  type        = string
+  description = "Remote account to let have access"
+}
