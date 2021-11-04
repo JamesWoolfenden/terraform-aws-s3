@@ -23,7 +23,7 @@ plan:
 planned: init
 	terraform plan -out tf.plan
 	terraform show -json tf.plan  > tf.json
-	checkov -f tf.json --bc-api-key ${BC_API_KEY}
+	checkov -f tf.json
 
 p:
 	terraform plan -refresh=true
@@ -47,14 +47,14 @@ docs:
 
 valid:
 	-terraform fmt -recursive
-	-checkov -d . --external-checks-dir ../../checkov --download-external-modules true
-	-tfsec .
+	-checkov -d . --external-checks-dir ../../checkov
+	-tfsec . --tfvars-file examples.auto.tfvars
 	-terrascan scan
 	docker pull checkmarx/kics:latest
 	docker run -v $(CURDIR):/path checkmarx/kics:latest scan --path /path
 
 compare:
-	-checkov -d . --external-checks-dir ../../checkov -o json >../../output/checkov.json --download-external-modules true
+	-checkov -d . --external-checks-dir ../../checkov -o json >../../output/checkov.json
 	-terrascan scan -o json -x json >../../output/terrascan.json
 	-tfsec . --out ../../output/tfsec.json -f json -s
 	docker pull checkmarx/kics:latest
