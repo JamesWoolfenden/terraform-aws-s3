@@ -32,15 +32,16 @@ module "s3" {
 This creates an S3 bucket with policy and applies the default tags scheme.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| Name                                             | Version |
+| ------------------------------------------------ | ------- |
+| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
 
 ## Modules
 
@@ -48,34 +49,35 @@ No modules.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_s3_bucket.bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
-| [aws_s3_bucket_public_access_block.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_public_access_block) | resource |
-| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
+| Name                                                                                                                                                   | Type        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| [aws_s3_bucket.bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket)                                          | resource    |
+| [aws_s3_bucket_public_access_block.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_public_access_block) | resource    |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity)                          | data source |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_access_block"></a> [access\_block](#input\_access\_block) | Settings for the public access block | `map(any)` | <pre>{<br>  "block_public_acls": true,<br>  "block_public_policy": true,<br>  "ignore_public_acls": true,<br>  "restrict_public_buckets": true<br>}</pre> | no |
-| <a name="input_logging"></a> [logging](#input\_logging) | n/a | `list(string)` | `[]` | no |
-| <a name="input_mfa_delete"></a> [mfa\_delete](#input\_mfa\_delete) | To enable/disable MFA delete | `bool` | `true` | no |
-| <a name="input_role"></a> [role](#input\_role) | n/a | `list` | `[]` | no |
-| <a name="input_s3_bucket_acl"></a> [s3\_bucket\_acl](#input\_s3\_bucket\_acl) | Acl on the bucket | `string` | `"private"` | no |
-| <a name="input_s3_bucket_force_destroy"></a> [s3\_bucket\_force\_destroy](#input\_s3\_bucket\_force\_destroy) | String Boolean to set bucket to be undeletable (well more difficult anyway) | `string` | n/a | yes |
-| <a name="input_s3_bucket_name"></a> [s3\_bucket\_name](#input\_s3\_bucket\_name) | The name of the bucket | `string` | n/a | yes |
-| <a name="input_s3_bucket_policy"></a> [s3\_bucket\_policy](#input\_s3\_bucket\_policy) | The IAM policy for the bucket | `string` | n/a | yes |
-| <a name="input_s3_logging"></a> [s3\_logging](#input\_s3\_logging) | Enable logging on s3 bucket | `bool` | `true` | no |
-| <a name="input_sse_algorithm"></a> [sse\_algorithm](#input\_sse\_algorithm) | The type of encryption algorithm to use | `string` | `"aws:kms"` | no |
-| <a name="input_versioning"></a> [versioning](#input\_versioning) | Enable versioning on s3 bucket | `bool` | `true` | no |
+| Name                                                                                                   | Description                                                                 | Type           | Default                                                                                                                                               | Required |
+| ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | :------: |
+| <a name="input_access_block"></a> [access_block](#input_access_block)                                  | Settings for the public access block                                        | `map(any)`     | <pre>{<br> "block_public_acls": true,<br> "block_public_policy": true,<br> "ignore_public_acls": true,<br> "restrict_public_buckets": true<br>}</pre> |    no    |
+| <a name="input_logging"></a> [logging](#input_logging)                                                 | n/a                                                                         | `list(string)` | `[]`                                                                                                                                                  |    no    |
+| <a name="input_mfa_delete"></a> [mfa_delete](#input_mfa_delete)                                        | To enable/disable MFA delete                                                | `bool`         | `true`                                                                                                                                                |    no    |
+| <a name="input_role"></a> [role](#input_role)                                                          | n/a                                                                         | `list`         | `[]`                                                                                                                                                  |    no    |
+| <a name="input_s3_bucket_acl"></a> [s3_bucket_acl](#input_s3_bucket_acl)                               | Acl on the bucket                                                           | `string`       | `"private"`                                                                                                                                           |    no    |
+| <a name="input_s3_bucket_force_destroy"></a> [s3_bucket_force_destroy](#input_s3_bucket_force_destroy) | String Boolean to set bucket to be undeletable (well more difficult anyway) | `string`       | n/a                                                                                                                                                   |   yes    |
+| <a name="input_s3_bucket_name"></a> [s3_bucket_name](#input_s3_bucket_name)                            | The name of the bucket                                                      | `string`       | n/a                                                                                                                                                   |   yes    |
+| <a name="input_s3_bucket_policy"></a> [s3_bucket_policy](#input_s3_bucket_policy)                      | The IAM policy for the bucket                                               | `string`       | n/a                                                                                                                                                   |   yes    |
+| <a name="input_s3_logging"></a> [s3_logging](#input_s3_logging)                                        | Enable logging on s3 bucket                                                 | `bool`         | `true`                                                                                                                                                |    no    |
+| <a name="input_sse_algorithm"></a> [sse_algorithm](#input_sse_algorithm)                               | The type of encryption algorithm to use                                     | `string`       | `"aws:kms"`                                                                                                                                           |    no    |
+| <a name="input_versioning"></a> [versioning](#input_versioning)                                        | Enable versioning on s3 bucket                                              | `bool`         | `true`                                                                                                                                                |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_account_id"></a> [account\_id](#output\_account\_id) | The AWS account number in use |
-| <a name="output_bucket"></a> [bucket](#output\_bucket) | The  bucket |
+| Name                                                              | Description                   |
+| ----------------------------------------------------------------- | ----------------------------- |
+| <a name="output_account_id"></a> [account_id](#output_account_id) | The AWS account number in use |
+| <a name="output_bucket"></a> [bucket](#output_bucket)             | The bucket                    |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Instructions
@@ -100,7 +102,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2021 James Woolfenden
+Copyright © 2019-2022 James Woolfenden
 
 ## License
 
