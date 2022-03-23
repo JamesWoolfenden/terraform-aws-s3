@@ -1,3 +1,3 @@
 s3_bucket_force_destroy = "false"
 s3_bucket_name          = "testjgw"
-mfa_delete              = false
+mfa_delete              = "Disabled"

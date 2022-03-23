@@ -9,5 +9,5 @@ variable "s3_bucket_force_destroy" {
 }
 
 variable "mfa_delete" {
-  type = bool
+  type = string
 }

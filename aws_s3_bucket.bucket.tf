@@ -1,51 +1,11 @@
 # tfsec:ignore:AWS002
 resource "aws_s3_bucket" "bucket" {
-  #checkov:skip=CKV2_AWS_6: to restrictive
-  acl    = var.s3_bucket_acl
-  bucket = var.s3_bucket_name
-  policy = var.s3_bucket_policy
-
+  #checkov:skip=CKV_AWS_19:v4 legacy
+  #checkov:skip=CKV_AWS_18:v4 legacy
+  #checkov:skip=CKV_AWS_145:v4 legacy
+  #checkov:skip=CKV_AWS_21:v4 legacy
+  #checkov:skip=CKV_AWS_144:v4 legacy
+  #checkov:skip=CKV_AWS_52:v4 legacy
+  bucket        = var.s3_bucket_name
   force_destroy = var.s3_bucket_force_destroy
-  #checkov:skip=CKV_AWS_52: "Ensure S3 bucket has MFA delete enabled"
-  versioning {
-    enabled    = var.versioning
-    mfa_delete = var.mfa_delete
-  }
-
-  #dynamic block is used to work around when logging is not required
-  dynamic "logging" {
-    for_each = var.logging
-    content {
-      target_bucket = logging.value
-      target_prefix = "log/${var.s3_bucket_name}"
-    }
-  }
-
-  dynamic "replication_configuration" {
-    for_each = var.role
-    content {
-      role = replication_configuration.value["role"]
-      rules {
-        id     = replication_configuration.value["id"]
-        status = replication_configuration.value["status"]
-        destination {
-          bucket        = replication_configuration.value["destination"]
-          storage_class = replication_configuration.value["storage_class"]
-        }
-      }
-
-    }
-  }
-
-  server_side_encryption_configuration {
-    rule {
-      apply_server_side_encryption_by_default {
-        sse_algorithm = var.sse_algorithm
-      }
-    }
-  }
-}
-
-variable "role" {
-  default = []
 }

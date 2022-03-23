@@ -19,17 +19,6 @@ variable "s3_bucket_policy" {
   type        = string
 }
 
-variable "s3_logging" {
-  description = "Enable logging on s3 bucket"
-  type        = bool
-  default     = true
-}
-
-variable "versioning" {
-  description = "Enable versioning on s3 bucket"
-  type        = bool
-  default     = true
-}
 
 variable "sse_algorithm" {
   description = "The type of encryption algorithm to use"
@@ -49,12 +38,25 @@ variable "access_block" {
 }
 
 variable "mfa_delete" {
-  type        = bool
+  type        = string
   description = "To enable/disable MFA delete"
-  default     = true
+  default     = "Disable"
+}
+
+variable "versioning" {
+  type        = string
+  description = "To enable/disable Versioning"
+  default     = "Enabled"
 }
 
 variable "logging" {
   type    = list(string)
   default = []
 }
+
+variable "role" {
+  description = "Replication configuration"
+  default     = []
+}
+
+variable "kms_key" {}
