@@ -20,8 +20,7 @@ resource "aws_s3_bucket_acl" "logging" {
 resource "aws_s3_bucket_versioning" "logging" {
   bucket = aws_s3_bucket.logging.id
   versioning_configuration {
-    status     = "Disabled"
-    mfa_delete = "Disabled"
+    status = "Disabled"
   }
 }
 
