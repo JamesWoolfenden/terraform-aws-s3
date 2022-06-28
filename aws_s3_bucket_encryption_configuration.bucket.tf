@@ -1,4 +1,5 @@
 resource "aws_s3_bucket_server_side_encryption_configuration" "bucket" {
+  count  = var.kms_key_id == "" ? 0 : 1
   bucket = aws_s3_bucket.bucket.bucket
 
   rule {
