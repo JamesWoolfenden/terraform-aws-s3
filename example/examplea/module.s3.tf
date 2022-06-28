@@ -4,7 +4,7 @@ module "s3" {
   s3_bucket_name          = local.full_s3_bucket_name
   s3_bucket_policy        = data.aws_iam_policy_document.basic.json
   mfa_delete              = var.mfa_delete
-  kms_key_id              = aws_kms_key.s3.arn
+  kms_key_id              = "" #aws_kms_key.s3.arn
   logging                 = [aws_s3_bucket.logging.bucket]
 }
 
