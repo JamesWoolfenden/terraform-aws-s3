@@ -59,4 +59,6 @@ variable "role" {
   default     = []
 }
 
-variable "kms_key" {}
+variable "kms_key_id" {
+  type = string
+}
