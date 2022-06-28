@@ -5,7 +5,7 @@ module "s3" {
   s3_bucket_policy        = data.aws_iam_policy_document.s3_policy.json
   mfa_delete              = "Disabled"
   logging                 = [aws_s3_bucket.logging.bucket]
-  kms_key                 = aws_kms_key.s3
+  kms_key                 = aws_kms_key.s3.arn
 }
 locals {
   full_s3_bucket_name = "${var.s3_bucket_name}${data.aws_caller_identity.current.account_id}"
