@@ -1,5 +1,9 @@
 
 resource "aws_s3_bucket" "logging" {
+  #checkov:skip=CKV_AWS_144: Replication not required
+  #checkov:skip=CKV_AWS_145: Legacy issue
+  #checkov:skip=CKV_AWS_19: Legacy issue
+  #checkov:skip=CKV_AWS_21: Legacy issue
   bucket = "logging-${data.aws_caller_identity.current.account_id}"
 }
 

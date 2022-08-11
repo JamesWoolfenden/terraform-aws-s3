@@ -1,5 +1,5 @@
-# tfsec:ignore:AWS077
 resource "aws_s3_bucket" "logging" {
+  # checkov:skip=CKV_AWS_145: Example code
   # checkov:skip=CKV_AWS_144: not
   # checkov:skip=CKV_AWS_18:This is a logging bucket
   # checkov:skip=CKV_AWS_21:Versioning for logs? Yeah no
