@@ -3,10 +3,6 @@
 name: Verify and Bump
 on:
   workflow_dispatch:
-    inputs: 
-      id:
-        description: 'run identifier'
-        required: false
   push:
     branches:
       - master
