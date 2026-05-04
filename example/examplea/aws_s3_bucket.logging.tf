@@ -1,6 +1,8 @@
 # tfsec:ignore:AWS077
 # tfsec:ignore:AWS098
 resource "aws_s3_bucket" "logging" {
+  # checkov:skip=CKV2_AWS_61: Lifecycle configuration not required for this bucket
+  # checkov:skip=CKV2_AWS_62: Event notifications not required for this bucket
   #checkov:skip=CKV_AWS_19:v4 legacy
   #checkov:skip=CKV_AWS_18:v4 legacy
   #checkov:skip=CKV_AWS_145:v4 legacy

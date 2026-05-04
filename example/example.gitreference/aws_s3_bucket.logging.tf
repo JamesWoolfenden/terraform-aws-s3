@@ -1,4 +1,6 @@
 resource "aws_s3_bucket" "logging" {
+  # checkov:skip=CKV2_AWS_61: Lifecycle configuration not required for this bucket
+  # checkov:skip=CKV2_AWS_62: Event notifications not required for this bucket
   #checkov:skip=CKV_AWS_144: Replication not required
   #checkov:skip=CKV_AWS_145: Legacy issue
   #checkov:skip=CKV_AWS_19: Legacy issue
