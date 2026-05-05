@@ -104,8 +104,29 @@ resource "aws_iam_policy" "terraform_pike" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
+                "ec2:DescribeAccountAttributes"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "iam:PassRole"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
                 "s3:CreateBucket",
                 "s3:DeleteBucket",
+                "s3:DeleteBucketPolicy",
                 "s3:GetAccelerateConfiguration",
                 "s3:GetBucketAcl",
                 "s3:GetBucketCORS",
@@ -129,9 +150,12 @@ resource "aws_iam_policy" "terraform_pike" {
                 "s3:PutBucketPolicy",
                 "s3:PutBucketPublicAccessBlock",
                 "s3:PutBucketVersioning",
-                "s3:PutEncryptionConfiguration"
+                "s3:PutEncryptionConfiguration",
+                "s3:PutReplicationConfiguration"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
